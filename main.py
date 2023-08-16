@@ -23,7 +23,7 @@ def correct_column_date(df, column_name):
 # Function to process and save DataFrame as CSV
 def process_and_save_csv(df, name, type):
     logging.info(f"Processing {name} - {type}")
-    df.to_csv(f"{name}_{type}.csv", sep=';', decimal=',', index=False)
+    df.to_csv(f"{name}_{type}.csv", sep=';', decimal=',', encoding = "utf-8-sig", index=False)
     logging.info(f"{name}_{type}.csv saved successfully")
 
 if __name__ == "__main__":
